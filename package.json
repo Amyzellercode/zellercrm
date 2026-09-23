@@ -1,7 +1,13 @@
 {
-  "name": "nextcrm-app",
+  "name": "zellercrm",
   "version": "0.22.0",
   "private": true,
+  "description": "ZellerCRM is an open-source CRM built with Next.js 16, React 19, TypeScript, PostgreSQL (Prisma 7), and shadcn/ui.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Amyzellercode/zellercrm.git"
+  },
   "engines": {
     "node": ">=22.12.0",
     "pnpm": ">=10.0.0"

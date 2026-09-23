@@ -1,22 +1,7 @@
-<a href="https://nextcrm.app/">
-  <h1 align="center">NextCRM</h1>
-</a>
+<h1 align="center">ZellerCRM</h1>
 
 <p align="center">
-<img alt="OG" src="public/images/opengraph-image.png" />
-</p>
-
-<p align="center">
-NextCRM is an open-source CRM built with Next.js 16, React 19, TypeScript, PostgreSQL (Prisma 7), and shadcn/ui. Features CRM, project management, invoicing, document storage, email client, AI-powered features, vector search, and MCP server for AI agent access.
-</p>
-
-<p align="center">
-<a href="https://twitter.com/nextcrmapp">
-<img alt="X (formerly Twitter) URL" src="https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fnextcrmapp">
-</a>
-  <a href="https://github.com/pdovhomilja/nextcrm-app/blob/main/LICENSE">
-    <img alt="GitHub License" src="https://img.shields.io/github/license/pdovhomilja/nextcrm-app">
-  </a>
+ZellerCRM is an open-source CRM built with Next.js 16, React 19, TypeScript, PostgreSQL (Prisma 7), and shadcn/ui. Features CRM, project management, invoicing, document storage, email client, AI-powered features, vector search, and MCP server for AI agent access.
 </p>
 
 <p align="center">
@@ -41,7 +26,7 @@ You can try it here [demo.nextcrm.io](https://demo.nextcrm.io), login via Google
 
 ### 🧾 Invoices Module — Full Invoicing Workflow *(NEW)*
 
-Complete invoicing system built into NextCRM — create, issue, pay, duplicate, and cancel invoices with multi-currency support, tax rates, and PDF generation.
+Complete invoicing system built into ZellerCRM — create, issue, pay, duplicate, and cancel invoices with multi-currency support, tax rates, and PDF generation.
 
 - **Invoice types** — Invoice, Credit Note, Proforma, and Receipt
 - **Line items** — per-line quantity, unit price, discount %, and tax rate with automatic totals calculation
@@ -112,7 +97,7 @@ ENV variable  →  Admin system-wide  →  User profile
 
 ### 🤖 MCP Server — AI Agent Access to CRM Data *(NEW)*
 
-NextCRM now ships with a built-in [Model Context Protocol](https://modelcontextprotocol.io/) server, letting AI agents (Claude, Cursor, custom agents) read and write CRM data directly.
+ZellerCRM now ships with a built-in [Model Context Protocol](https://modelcontextprotocol.io/) server, letting AI agents (Claude, Cursor, custom agents) read and write CRM data directly.
 
 **127 tools across 15 modules:**
 
@@ -140,9 +125,9 @@ NextCRM now ships with a built-in [Model Context Protocol](https://modelcontextp
 ```json
 {
   "mcpServers": {
-    "nextcrm": {
+    "zellercrm": {
       "type": "http",
-      "url": "https://your-nextcrm.com/api/mcp/mcp",
+      "url": "https://your-zellercrm.com/api/mcp/mcp",
       "headers": { "Authorization": "Bearer nxtc__your_token_here" }
     }
   }
@@ -229,7 +214,7 @@ Global search across all CRM entities from a single search bar — grouped resul
 
 ## Roadmap
 
-1. ✅ Docker version — complete bundle to run NextCRM on-premise
+1. ✅ Docker version — complete bundle to run ZellerCRM on-premise
 2. ✅ Upgrade to Next.js 16 — running on Next.js 16 with React 19
 3. ✅ i18n / localization — 4 languages (English, Czech, German, Ukrainian)
 4. ✅ Email client — IMAP/SMTP email client built in
@@ -238,15 +223,15 @@ Global search across all CRM entities from a single search bar — grouped resul
 7. ✅ Vector similarity search — "Find Similar" on all CRM entity detail pages
 8. ✅ Unified search — keyword + semantic search across all CRM modules
 9. ✅ CRM Targets module — sales target and target list management
-10. ✅ MCP server — 25 CRM tools for AI agent access via Bearer token auth
+10. ✅ MCP server — 127 tools across 15 modules for AI agent access via Bearer token auth
 11. ✅ AI enrichment — E2B sandboxed agent (real browser + Claude Sonnet) for target/contact enrichment; C-level contact discovery; 3-tier API key management (ENV → admin → user)
 12. ✅ Audit log & history — soft delete + full field-level change trail on all CRM entities; global admin audit log page
 13. ✅ CRM Activities — notes, calls, emails, meetings, tasks linked to any CRM entity; paginated feed on all detail pages
 14. ✅ Invoices module — full invoicing workflow with line items, tax engine, multi-currency, invoice series, payments, PDF export, and email delivery
 15. 🔄 More AI powered features — daily summary of tasks and projects
-15. 📋 Email campaigns management — integration with MailChimp and Listmonk
-16. 📋 Testing expansion — Jest + Playwright coverage (contributions welcome!)
-17. 🔄 Fix all TypeScript `any` types — ongoing cleanup
+16. 📋 Email campaigns management — integration with MailChimp and Listmonk
+17. 📋 Testing expansion — Jest + Playwright coverage (contributions welcome!)
+18. 🔄 Fix all TypeScript `any` types — ongoing cleanup
 
 ## Emails
 
@@ -254,7 +239,7 @@ We use [resend.com](https://resend.com) + [react.email](https://react.email) as 
 
 ### Mailtrap (Email API/SMTP)
 
-NextCRM supports [Mailtrap](https://mailtrap.io) as an alternative email provider to Resend, for both production sending and safe dev/staging testing through a single API.
+ZellerCRM supports [Mailtrap](https://mailtrap.io) as an alternative email provider to Resend, for both production sending and safe dev/staging testing through a single API.
 
 **Sending emails (production):**
 
@@ -268,7 +253,7 @@ Use a Mailtrap Sandbox inbox instead of a production domain during development, 
 
 ## Reports
 
-We use Tremor charts as a tool for creating charts in NextCRM
+We use Tremor charts as a tool for creating charts in ZellerCRM
 
 ![hero](/public/reports.png)
 
@@ -362,7 +347,7 @@ Available soon at: http://docs.nextcrm.io
 
 ## Docker Installation (Recommended for Self-Hosting)
 
-The fastest way to run NextCRM is with Docker Compose. The provided `docker-compose.yml` bundles everything you need: the app, PostgreSQL (with pgvector), MinIO for file storage, and Inngest for background jobs. No manual setup of databases, buckets, or migrations — it all happens automatically on first start.
+The fastest way to run ZellerCRM is with Docker Compose. The provided `docker-compose.yml` bundles everything you need: the app, PostgreSQL (with pgvector), MinIO for file storage, and Inngest for background jobs. No manual setup of databases, buckets, or migrations — it all happens automatically on first start.
 
 ### Quick Start
 
@@ -384,13 +369,13 @@ docker compose up -d
 Open [http://localhost:3000](http://localhost:3000) — the app is ready, the schema is migrated, and the seeded admin user matches the `ADMIN_EMAIL` you set.
 
 > [!IMPORTANT]
-> NextCRM uses **passwordless Email OTP** for login. You MUST set `ADMIN_EMAIL` to an address you control AND provide a `RESEND_API_KEY` (or another email provider) so OTP codes can actually be delivered. Without an email provider, you can still log in by reading the OTP straight from the database — convenient for first-time testing, not for production.
+> ZellerCRM uses **passwordless Email OTP** for login. You MUST set `ADMIN_EMAIL` to an address you control AND provide a `RESEND_API_KEY` (or another email provider) so OTP codes can actually be delivered. Without an email provider, you can still log in by reading the OTP straight from the database — convenient for first-time testing, not for production.
 
 ### What you get
 
 | Service | Purpose | Exposed |
 |---|---|---|
-| `app` | NextCRM (Next.js standalone build) | `localhost:3000` |
+| `app` | ZellerCRM (Next.js standalone build) | `localhost:3000` |
 | `postgres` | PostgreSQL 17 with pgvector | internal only |
 | `minio` | S3-compatible object storage | internal only |
 | `inngest` | Background job runner | internal only |
@@ -482,22 +467,15 @@ docker compose exec postgres psql -U nextcrm -d nextcrm \
 
 Use that OTP on the sign-in page. After login, configure an email provider from the Admin panel so future logins work normally.
 
-## Contact
-
-[www.dovhomilja.cz](https://www.dovhomilja.cz)
-</br>
-[<img alt="X (formerly Twitter) URL" src="https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fdovhomilja">
-](https://twitter.com/dovhomilja)
-
 ## Contributing
 
-We are open to the NextCRM community contributions. Every contribution is welcome.
+We are open to the ZellerCRM community contributions. Every contribution is welcome.
 
 ### Issues
 
 - [Open an issue](https://github.com/pdovhomilja/nextcrm-app/issues) if you find a bug or have a suggestion for improvements.
 
-### NextCRM Super heroes
+### ZellerCRM Super heroes
 
 <a href="https://github.com/pdovhomilja/nextcrm-app/graphs/contributors">
 <img src="https://contrib.rocks/image?repo=pdovhomilja/nextcrm-app" />
@@ -521,4 +499,4 @@ Made with [contrib.rocks](https://contrib.rocks).
 
 ## License
 
-Licensed under the [MIT license](https://github.com/pdovhomilja/nextcrm-app/blob/main/LICENSE.md).
+Licensed under the [MIT license](LICENSE).
